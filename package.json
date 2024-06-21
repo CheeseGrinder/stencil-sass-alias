@@ -1,0 +1,52 @@
+{
+  "name": "@cheese-grinder/stencil-sass-alias",
+  "version": "0.1.0",
+  "scripts": {
+    "prebuild": "rimraf -rf ./dist ./build ./config",
+    "build": "tsc -p . && rollup -c rollup.config.mjs",
+    "format": "prettier ./src/**/*.ts --write",
+    "format:check": "prettier ./src/**/*.ts --check",
+    "lint": "eslint \"src/**/*.ts\" --fix"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "stencil",
+    "sass",
+    "alias",
+    "transform"
+  ],
+  "author": "https://github.com/CheeseGrinder",
+  "license": "MIT",
+  "description": "StencilJS sass alias plugin",
+  "homepage": "https://github.com/CheeseGrinder/stencil-sass-alias#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CheeseGrinder/stencil-sass-alias.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CheeseGrinder/stencil-sass-alias/issues"
+  },
+  "devDependencies": {
+    "@stencil/sass": "~3.0.12",
+    "@types/node": "~20.14.7",
+    "@typescript-eslint/eslint-plugin": "~7.13.1",
+    "@typescript-eslint/parser": "~7.13.1",
+    "audit-ci": "~7.0.1",
+    "eslint": "~8.57.0",
+    "prettier": "~3.3.2",
+    "rimraf": "~5.0.7",
+    "rollup": "~4.18.0",
+    "typescript": "~5.4.5"
+  },
+  "peerDependencies": {
+    "@stencil/sass": ">= 3.x.x"
+  }
+}
