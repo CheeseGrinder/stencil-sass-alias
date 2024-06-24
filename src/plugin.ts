@@ -1,6 +1,6 @@
 import type { Importer } from '@stencil/sass/dist/declarations';
-import { existsSync, stat } from 'node:fs';
-import { join, normalize } from 'node:path';
+import { existsSync, stat } from 'fs';
+import { join, normalize } from 'path';
 import type { SassAliasConfig } from './plugin.type';
 
 export function sassAlias(config: SassAliasConfig = {} as SassAliasConfig): Importer {
@@ -14,15 +14,11 @@ export function sassAlias(config: SassAliasConfig = {} as SassAliasConfig): Impo
 
     stat(file, (_, stats) => {
       const dirIndex = join(file, 'index');
-      if (stats.isDirectory() && existsSync(dirIndex)) {
-        done({
-          file: dirIndex,
-        });
-      }
+      const filePath = stats?.isDirectory() && existsSync(dirIndex) ? dirIndex : file;
 
       done({
-        file
+        file: filePath,
       });
-    })
+    });
   };
 }

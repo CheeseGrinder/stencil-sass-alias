@@ -19,8 +19,8 @@ export default {
   ],
   external: [
     '@stencil/sass',
-    'node:fs',
-    'node:path',
+    'fs',
+    'path',
     'typescript',
   ]
 };
