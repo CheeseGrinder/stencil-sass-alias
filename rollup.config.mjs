@@ -3,7 +3,7 @@ const require = createRequire(import.meta.url);
 
 const pkg = require('./package.json');
 
-/** @type {import('rollup').Config} */
+/** @type {import('rollup').InputOptions} */
 export default {
   input: 'build/index.js',
 
@@ -19,6 +19,7 @@ export default {
   ],
   external: [
     '@stencil/sass',
+    'node:fs',
     'node:path',
     'typescript',
   ]
