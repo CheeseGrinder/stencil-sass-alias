@@ -4,9 +4,10 @@
   "scripts": {
     "prebuild": "rimraf -rf ./dist ./build ./config",
     "build": "tsc -p . && rollup -c rollup.config.mjs",
-    "format": "prettier ./src/**/*.ts --write",
-    "format:check": "prettier ./src/**/*.ts --check",
-    "lint": "eslint \"src/**/*.ts\" --fix"
+    "format": "prettier ./src/**/*.ts --check",
+    "format:fix": "prettier ./src/**/*.ts --write",
+    "lint": "eslint \"src/**/*.ts\"",
+    "lint:fix": "eslint \"src/**/*.ts\" --fix"
   },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
