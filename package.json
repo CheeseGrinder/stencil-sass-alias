@@ -37,6 +37,8 @@
     "url": "https://github.com/CheeseGrinder/stencil-sass-alias/issues"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
     "@stencil/sass": "~3.0.12",
     "@types/node": "~20.14.7",
     "@typescript-eslint/eslint-plugin": "~7.13.1",
