@@ -24,10 +24,6 @@ A plugin for [StencilJS][stencil-site] to add aliasied path in SASS and SCSS fil
 
 ---------
 
-
-[stencil-site]: https://stenciljs.com/
-
-
 ### Install
 
 ```bash
@@ -65,5 +61,12 @@ The plugin takes one argument, which is a object with the following properties.
 ### Contributing
 
 Thanks for your interest in contributing!
-Please take a moment to read up on our guidelines for [contributing](https://github.com/ionic-team/stencil/blob/main/CONTRIBUTING.md).
-Please note that this project is released with a [Contributor Code of Conduct](https://github.com/ionic-team/stencil/blob/main/CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+Please take a moment to read up on our guidelines for [contributing][contributing].
+Please note that this project is released with a [Contributor Code of Conduct][code-of-conduct]. By participating in this project you agree to abide by its terms.
+
+
+<!-- Links -->
+
+[stencil-site]: https://stenciljs.com/
+[contributing]: https://github.com/CheeseGrinder/stencil-sass-alias/blob/main/CONTRIBUTING.md
+[code-of-conduct]: https://github.com/CheeseGrinder/stencil-sass-alias/blob/main/CODE_OF_CONDUCT.md
