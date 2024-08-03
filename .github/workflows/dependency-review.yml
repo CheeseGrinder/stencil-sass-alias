@@ -8,9 +8,23 @@
 # Source repository: https://github.com/actions/dependency-review-action
 # Public documentation: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review#dependency-review-enforcement
 name: 'Dependency review'
+
 on:
+  workflow_call: 
+  push:
+    paths-ignore: 
+      - '.github/**'
+      - '.husky/**'
+      - 'assets/**'
+    branches:
+      - main
+      - develop
+      - 'feat/**'
+      - 'fix/**'
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
+      - develop
 
 # If using a dependency submission action in this workflow this permission will need to be set to:
 #
