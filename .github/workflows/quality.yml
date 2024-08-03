@@ -19,7 +19,6 @@ on:
       - main
       - develop
 
-
 jobs:
   format:
     name: Format
@@ -76,16 +75,17 @@ jobs:
       contents: read # for actions/checkout to fetch code
       security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
       actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
+
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: nodejsscan scan
-      id: njsscan
-      uses: ajinabraham/njsscan-action@7237412fdd36af517e2745077cedbf9d6900d711
-      with:
-        args: '. --sarif --output results.sarif || true'
+      - name: nodejsscan scan
+        id: njsscan
+        uses: ajinabraham/njsscan-action@7237412fdd36af517e2745077cedbf9d6900d711
+        with:
+          args: '. --sarif --output results.sarif || true'
 
-    - name: Upload njsscan report
-      uses: github/codeql-action/upload-sarif@v3
-      with:
-        sarif_file: results.sarif
+      - name: Upload njsscan report
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: results.sarif

@@ -20,7 +20,7 @@ on:
       - develop
 
 jobs:
-  build:
+  build-package:
     name: Build
     runs-on: ubuntu-latest
     strategy:
