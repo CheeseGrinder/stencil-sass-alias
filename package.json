@@ -1,6 +1,6 @@
 {
   "name": "@cheese-grinder/stencil-sass-alias",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "scripts": {
     "prebuild": "rimraf -rf ./dist ./build ./config",
     "build": "tsc -p . && rollup -c rollup.config.mjs",
