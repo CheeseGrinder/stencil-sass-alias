@@ -8,7 +8,7 @@
     "format:fix": "biome format --write",
     "lint": "biome lint",
     "lint:fix": "biome lint --write",
-    "prepare": "husky"
+    "prepare": "git config core.hooksPath .githooks"
   },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -43,7 +43,6 @@
     "@stencil/sass": "~3.0.12",
     "@types/node": "~20.14.7",
     "audit-ci": "~7.0.1",
-    "husky": "^9.1.4",
     "rimraf": "~5.0.7",
     "rollup": "~4.18.0",
     "typescript": "~5.4.5"
